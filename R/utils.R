@@ -21,10 +21,12 @@ DLX_COLLECTIONS_ALL <- c("lta", "ltb", "ltc", "mt", "retsinfo", "fob", "ft")
 # DocumentType composite codes, post-2007 schema. Incomplete: derived from a
 # 39-document sample of Lovtidende A. See data-raw/api-exploration.R.
 DLX_TYPE_CODES <- c(
+  LOKDOK01 = "Lov",
   LOKDOK02 = "Lov (\u00e6ndring)",
   LOKDOK03 = "Lovbekendtg\u00f8relse",
   LOKDOK04 = "Bekendtg\u00f8relse",
-  LOKDOK05 = "Bekendtg\u00f8relse (\u00e6ndring)"
+  LOKDOK05 = "Bekendtg\u00f8relse (\u00e6ndring)",
+  LOKDOK17 = "Anordning"
 )
 
 danlex_user_agent <- function() {
@@ -290,7 +292,7 @@ split_document_type <- function(x) {
 
   parts <- strsplit(x, "#", fixed = TRUE)[[1]]
   label <- trimws(parts[1])
-  code  <- if (length(parts) > 1L) trimws(parts[2]) else NA_character_
+  code  <- if (length(parts) > 1L) gsub("\\s+", "", parts[2]) else NA_character_
 
   standard <- if (!is.na(code) && code %in% names(DLX_TYPE_CODES)) {
     unname(DLX_TYPE_CODES[[code]])

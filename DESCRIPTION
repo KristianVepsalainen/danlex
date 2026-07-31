@@ -9,6 +9,8 @@ Description: Provides access to Danish acts, regulations and treaties
     (ELI) service. Part of the lexverse family of packages for legal and
     regulatory data.
 License: MIT + file LICENSE
+Depends: 
+    R (>= 4.1.0)
 URL: https://github.com/KristianVepsalainen/danlex
 BugReports: https://github.com/KristianVepsalainen/danlex/issues
 Encoding: UTF-8
