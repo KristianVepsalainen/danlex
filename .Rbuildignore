@@ -1,1 +1,7 @@
+^danlex\.Rproj$
+^\.Rproj\.user$
+^\.Rhistory$
 ^LICENSE\.md$
+^\.github$
+^data-raw$
+^danlex_ROADMAP\.md$
