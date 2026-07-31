@@ -1,13 +1,18 @@
 Package: danlex
-Title: What the Package Does (One Line, Title Case)
+Title: Access Danish Legislation from Retsinformation
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Kristian", "Vepsäläinen", , "sinun@sahkoposti.fi",
+           role = c("aut", "cre"))
+Description: Provides access to Danish acts, regulations and treaties
+    published by Retsinformation via its European Legislation Identifier
+    (ELI) service. Part of the lexverse family of packages for legal and
+    regulatory data.
 License: MIT + file LICENSE
+URL: https://github.com/KristianVepsalainen/danlex
+BugReports: https://github.com/KristianVepsalainen/danlex/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 8.0.0
 Imports: 
     httr2,
     rlang,
@@ -16,3 +21,4 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Config/roxygen2/version: 8.0.0
