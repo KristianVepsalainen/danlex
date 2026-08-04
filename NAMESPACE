@@ -3,6 +3,7 @@
 export(dlx_clear_index)
 export(dlx_get_changes)
 export(dlx_get_doc)
+export(dlx_get_docs)
 export(dlx_get_paragraphs)
 export(dlx_get_references)
 export(dlx_get_text)
